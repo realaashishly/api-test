@@ -19,10 +19,8 @@ const automation = async () => {
     clearOutFolder();
 };
 
-automation();
-
-// cron.schedule("*/20 * * * *", () => {
-//     console.log("==== Job started ====");
-//     automation();
-//     console.log("==== Job executed ====");
-// });
+cron.schedule("*/20 * * * *", () => {
+    console.log("==== Job started ====");
+    automation();
+    console.log("==== Job executed ====");
+});
